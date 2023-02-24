@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  
+  <body>
+  <h1>You have landed on Christina's homepage</h1>  
+    <p>This page has been visited {{ count }} times</p>
+  {% for comment in comments %}
+    <p>
+      <b>Name:</b> {{ comment['name']  }}<br>
+      <b>Comment:</b> {{ comment['comment'] }}
+    </p>
+    {% endfor %}
+    <form method="post" action="/add_comment"> 
+      <label for="name">First Name:</label>
+      <input type="text" name="name"></input>
+      <br>
+      <label for="age">Age:</label>
+      <input type="text" name="age"></input>
+      <br>
+      <label for="comment">Comment:</label>
+      <textarea name="comment"></textarea>
+      <button type="submit">Go4It</button>
+    </form>
+  </body>
+</html>
